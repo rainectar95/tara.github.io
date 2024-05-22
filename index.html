@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bottom Sheet Demo</title>
+    <style>
+        #bottomSheet {
+            position: fixed;
+            background-color: #f1f1f1;
+            width: 100%;
+            height: 200px;
+            bottom: -200px;
+            transition: bottom 0.3s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bottomSheet.open {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="openBottomSheet()">Open Bottom Sheet</button>
+    
+    <div id="bottomSheet">
+        <p>This is a bottom sheet!</p>
+        <button onclick="closeBottomSheet()">Close</button>
+    </div>
+
+    <script>
+        function openBottomSheet() {
+            var bottomSheet = document.getElementById("bottomSheet");
+            bottomSheet.classList.add("open");
+        }
+
+        function closeBottomSheet() {
+            var bottomSheet = document.getElementById("bottomSheet");
+            bottomSheet.classList.remove("open");
+        }
+    </script>
+</body>
+</html>
