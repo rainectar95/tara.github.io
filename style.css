@@ -1,0 +1,85 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+.scales {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+.scale {
+    margin: 8px;
+    width: 50%;
+    
+}
+#virtual-keyboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-auto-rows: 60px;
+
+}
+#grossWeight{
+    margin: 16px 0px;
+    border: 0px;
+    background-color: #fcf;
+    border-radius: 16px;
+    ;
+    
+}
+#grossWeight, .gramm-label
+{
+    font-size: 36px;
+}
+.gramm-label {
+    font-size:14px;
+    padding:28px;
+    background-color:#dee;
+    border-radius:16px;
+    margin: 36px 8px;
+}
+button {
+    font-size:18px;
+    padding: 10px;
+    margin: 0;
+    border: 0px;
+    border-radius: 16px;
+}
+#result {
+    display: none;
+}
+.clean {
+    grid-auto-flow: column dense;
+    background-color: #FF7;
+    grid-column: 2 span;
+}
+
+.tabs {
+background-color:#333;
+}
+
+.tab-button {
+background-color: #f1f1f1;
+color: #333;
+border: none;
+padding: 20px;
+cursor: pointer;
+}
+
+.tab-button.active {
+background-color: #ccc;
+}
+
+.tab-content {
+display: none;
+padding: 24px;
+}
+
+.tab-content.active {
+display: block;
+}
+.card{
+background-color:#f1f1f1;
+padding:24px;
+}
