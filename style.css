@@ -1,16 +1,23 @@
-
+/* div, p, input, button {
+    outline: 1px solid gray;
+} */
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
+    padding: 0px;
 }
 .scales {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     margin: 0px;
+    padding: 0px;
+    overflow:auto;
 }
 .scale {
-    margin: 8px;
-    width: 50%;
+    height: 50%;
+    padding: 8px;
     
 }
 #virtual-keyboard {
@@ -20,24 +27,37 @@ body {
     grid-auto-rows: 60px;
 
 }
+#grossWeight, #result{
+flex: 1;
+} 
 #grossWeight{
-    margin: 16px 0px;
+    border-radius: 48px;
+    color: #000;
     border: 0px;
-    background-color: #fcf;
-    border-radius: 16px;
-    ;
+    outline: none;
+    text-align: right;
+    width: 100%;
     
 }
 #grossWeight, .gramm-label
 {
     font-size: 36px;
+    overflow: hidden;
+
 }
 .gramm-label {
+    display: flex;
     font-size:14px;
-    padding:28px;
-    background-color:#dee;
-    border-radius:16px;
-    margin: 36px 8px;
+    border-radius:160px;
+}
+.scale.pad{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+}
+.gramm-label{
+    appearance: none;
+    padding: 16px;
 }
 button {
     font-size:18px;
@@ -45,26 +65,42 @@ button {
     margin: 0;
     border: 0px;
     border-radius: 16px;
+    background-color: #00000010;
 }
 #result {
+    font-size: 36px;
+    display: none;
+    color: rgb(149, 149, 149);
+    margin: 0;
+}
+.zero{
+    grid-auto-flow: column dense;
+}
+.clean, .delete {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 12px;
+    background-color: #00000038;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.tab-content.active::-webkit-scrollbar {
     display: none;
 }
-.clean {
-    grid-auto-flow: column dense;
-    background-color: #FF7;
-    grid-column: 2 span;
-}
-
 .tabs {
-background-color:#333;
+height: 100%;
 }
 
 .tab-button {
 background-color: #f1f1f1;
 color: #333;
 border: none;
-padding: 20px;
+padding: 8px;
 cursor: pointer;
+margin-bottom: 8px;
 }
 
 .tab-button.active {
@@ -73,13 +109,31 @@ background-color: #ccc;
 
 .tab-content {
 display: none;
-padding: 24px;
+padding: 4px 8px;
+background-color: #0000000c;
+border-radius: 16px;
 }
 
 .tab-content.active {
 display: block;
+overflow: scroll;
+height: 80%;
 }
-.card{
-background-color:#f1f1f1;
-padding:24px;
+
+.card {
+    display: block;
+    cursor: pointer;
+    padding: 8px;
+background-color: #a4a4a42b;    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.card input[type="radio"] {
+    display: none;
+}
+.card p {
+    margin: 0;
+}
+.card.active {
+    background-color: #b2f253; /* Example active color */
 }
