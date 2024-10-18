@@ -6,7 +6,7 @@
 	"orientation": "portrait",
 	"start_url": "/WebAPK/",
 	"scope": "/WebAPK/",
-	"display": "standalone",
+	"display": "fullscreen",
 	"background_color": "grey",
 	"theme_color": "black",
 	"icons": [
